@@ -1,0 +1,19 @@
+apply plugin: 'java'
+apply plugin: 'jacoco'
+apply plugin: 'application'
+
+
+mainClassName = 'ru.soniir.TestEx.Main'
+
+repositories {
+    mavenCentral();
+    jcenter();
+}
+jacoco {
+    toolVersion = "0.8.4"
+}
+dependencies {
+    testCompile 'junit:junit:4.12'
+    testImplementation 'org.mockito:mockito-all:1.10.19'
+}
+
